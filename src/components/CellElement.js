@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 // eslint-disable-next-line react/prefer-stateless-function
 export default class CellElement extends Component {
   render() {
-    const { cellType, isCellElementZero } = this.props;
+    const { cellType, isCellElementZero ,handleCellClick} = this.props;
     return (
-      <div className={`cellElement ${isCellElementZero ? ' cellZero' : ''}`}>
+      <div onClick={handleCellClick} className={`cellElement ${isCellElementZero ? ' cellZero' : ''}`}>
         {cellType}
       </div>
     );
@@ -13,6 +13,7 @@ export default class CellElement extends Component {
 }
 
 CellElement.propTypes = {
+  handleCellClick:PropTypes.func,
   cellType: PropTypes.string.isRequired,
   isCellElementZero: PropTypes.bool.isRequired,
 };
