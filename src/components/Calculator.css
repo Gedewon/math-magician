@@ -5,9 +5,8 @@
 }
 
 input {
-  width: 96.5%;
+  width: 98.5%;
   height: 50px;
-  margin-left: 4px;
   background-color: rgb(212, 206, 206);
   border: solid 0.1px rgb(162, 160, 160);
 }
@@ -24,7 +23,7 @@ input {
 }
 
 .cellElement {
-  width: 22%;
+  width: 25%;
   background-color: #fff;
   display: flex;
   justify-content: center;
@@ -35,7 +34,7 @@ input {
 }
 
 .cellZero {
-  width: 47%;
+  width: 50%;
 }
 
 .cellElements :nth-child(4n),
