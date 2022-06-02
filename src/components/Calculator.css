@@ -1,38 +1,44 @@
-.calculator{
-    max-width: 400px;
-    margin: auto;
-    margin-top: 10%;
+.calculator {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 10%;
 }
-input{
-    width: 96.5%;
-    height: 50px;
-    margin-left: 4px;
-    background-color: rgb(212, 206, 206);
-    border: solid 0.1px rgb(162, 160, 160);
+
+input {
+  width: 96.5%;
+  height: 50px;
+  margin-left: 4px;
+  background-color: rgb(212, 206, 206);
+  border: solid 0.1px rgb(162, 160, 160);
 }
-.cellElements{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    
+
+.cellElements {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
 }
-.cellElements:nth-child(3){
-    background-color: red;
+
+.cellElements:nth-child(3) {
+  background-color: red;
 }
-.cellElement{
-    width: 22%;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: solid 1px gray;
-    padding: 1%;
-    height: 40px;
+
+.cellElement {
+  width: 22%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px gray;
+  padding: 1%;
+  height: 40px;
 }
-.cellZero{
-    width: 47%;
+
+.cellZero {
+  width: 47%;
 }
-.cellElements :nth-child(4n),.cellElements :last-child{
-    background-color: rgb(226, 146, 34);
+
+.cellElements :nth-child(4n),
+.cellElements :last-child {
+  background-color: rgb(226, 146, 34);
 }
