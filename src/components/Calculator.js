@@ -1,20 +1,30 @@
 import React, { Component } from 'react';
-import './Calculator.css'
-import CellElement from './CellElement.js'
+import './Calculator.css';
+import PropTypes from 'prop-types';
+import CellElement from './CellElement';
+
 // eslint-disable-next-line react/prefer-stateless-function
 export default class Calculator extends Component {
   render() {
+    const { cellElements } = this.props;
     return (
-      <section className='calculator'>
+      <section className="calculator">
         <form>
-          <input readOnly="readonly"/>
+          <input readOnly="readonly" />
         </form>
-        <div className='cellElements'>
-        {
-          this.props.cellElements.map((cellType,index)=><CellElement cellType={cellType} key={index} isCellElementZero={cellType === '0'? true :false}/>)
-        }
+        <div className="cellElements">
+          {
+          cellElements.map((cellType) => <CellElement cellType={cellType} key={`cell_${cellType}`} isCellElementZero={cellType === '0'} />)
+          }
         </div>
       </section>
     );
   }
 }
+
+Calculator.propTypes = {
+  cellElements: PropTypes.arrayOf(PropTypes.string),
+};
+Calculator.defaultProps = {
+  cellElements: [''],
+};
