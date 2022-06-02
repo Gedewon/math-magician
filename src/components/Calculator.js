@@ -5,36 +5,38 @@ import CellElement from './CellElement';
 import calculate from '../logic/calculate';
 // eslint-disable-next-line react/prefer-stateless-function
 export default class Calculator extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state = { 
-      total:null,
-      next:null,
-      operation:null,
-    } 
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    };
     this.handleCellClick = this.handleCellClick.bind(this);
     this.calculatorScreen = this.calculatorScreen.bind(this);
   }
 
-  handleCellClick(e){
-    this.setState({
-      ...calculate(this.state,e.target.innerHTML)
-    });
+  handleCellClick(e) {
+    this.setState((prevState) => ({
+
+      ...calculate(prevState, e.target.innerHTML),
+    }));
   }
-  calculatorScreen(){
-    if(!this.state.next && !this.state.operation)return this.state.total;
-   
-    if(!this.state.total)return this.state.next;
-  
-    if(!this.state.next)return this.state.total + this.state?.operation ;
-    return this.state.total + this.state.operation + this.state.next;
+
+  calculatorScreen() {
+    const { total, next, operation } = this.state;
+    if (!next && !operation) return total;
+    if (!total) return next;
+    if (!next) return total + operation;
+    return total + operation + next;
   }
+
   render() {
     const { cellElements } = this.props;
     return (
       <section className="calculator">
         <form>
-          <input readOnly="readonly" value={this.calculatorScreen()}/>
+          <input readOnly="readonly" value={this.calculatorScreen() || ''} />
         </form>
         <div className="cellElements">
           {
