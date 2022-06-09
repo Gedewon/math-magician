@@ -8,7 +8,7 @@ import DefaultLayout from './components/Layout/DefaultLayout';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
+    <Router basename="/math-magician">
       <DefaultLayout>
         <App />
       </DefaultLayout>
