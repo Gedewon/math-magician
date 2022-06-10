@@ -32,7 +32,7 @@ const Calculator = ({ cellElements }) => {
       </form>
       <div className="cellElements">
         {
-          cellElements.map((cellType) => <CellElement  handleCellClick={handleCellClick} cellType={cellType} key={`cell_${cellType}`} isCellElementZero={cellType === '0'} />)
+          cellElements.map((cellType) => <CellElement handleCellClick={handleCellClick} cellType={cellType} key={`cell_${cellType}`} isCellElementZero={cellType === '0'} />)
           }
       </div>
     </section>

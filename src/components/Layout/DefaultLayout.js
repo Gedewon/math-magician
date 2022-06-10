@@ -8,7 +8,7 @@ function DefaultLayout({ children }) {
     <>
       <section className="header">
         <header>
-          <h1 >Math Magicians</h1>
+          <h1>Math Magicians</h1>
         </header>
         <nav>
           <ul>
