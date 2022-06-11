@@ -24,4 +24,16 @@ describe('Testing calculate functioning', () => {
     };
     expect(calculate(obj, btnName)).toStrictEqual(expected);
   });
+  it('The working of "." button', () => {
+    const obj = {
+      total: null,
+      next: '4',
+    };
+    const btnName = '.';
+    const expected = {
+      total: null,
+      next: '4.',
+    };
+    expect(calculate(obj, btnName)).toStrictEqual(expected);
+  });
 });
