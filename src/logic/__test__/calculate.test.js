@@ -15,4 +15,13 @@ describe('Testing calculate functioning', () => {
     };
     expect(calculate(obj, btnName)).toStrictEqual(expected);
   });
+  it('Insert a number value when clicked', () => {
+    const obj = {};
+    const btnName = '0';
+    const expected = {
+      total: null,
+      next: btnName,
+    };
+    expect(calculate(obj, btnName)).toStrictEqual(expected);
+  });
 });
