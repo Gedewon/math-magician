@@ -36,4 +36,18 @@ describe('Testing calculate functioning', () => {
     };
     expect(calculate(obj, btnName)).toStrictEqual(expected);
   });
+  it('Test the = sign operator function', () => {
+    const obj = {
+      total: '100',
+      next: '20',
+      operation: '-',
+    };
+    const btnName = '=';
+    const expected = {
+      total: '80',
+      next: null,
+      operation: null,
+    };
+    expect(calculate(obj, btnName)).toStrictEqual(expected);
+  });
 });
