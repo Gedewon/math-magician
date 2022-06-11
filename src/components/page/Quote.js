@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Qoute() {
+function Quote() {
   return (
     <div>
-      <blockquote>
+      <blockquote role="blockquote">
         Without mathematics, there’s nothing you can do.
         Everything around you is mathematics. Everything around you is numbers.
         <br />
@@ -13,4 +13,4 @@ function Qoute() {
   );
 }
 
-export default Qoute;
+export default Quote;

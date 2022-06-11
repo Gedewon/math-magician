@@ -28,7 +28,7 @@ const Calculator = ({ cellElements }) => {
   return (
     <section className="calculator">
       <form>
-        <input readOnly="readonly" value={calculatorScreen() || ''} />
+        <input data-testid="calculator-screen" readOnly="readonly" value={calculatorScreen() || ''} />
       </form>
       <div className="cellElements">
         {

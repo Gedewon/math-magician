@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CellElement = ({ cellType, isCellElementZero, handleCellClick }) => (<button type="button" onClick={handleCellClick} className={`cellElement ${isCellElementZero ? ' cellZero' : ''}`}>{cellType}</button>);
+const CellElement = ({ cellType, isCellElementZero, handleCellClick }) => (<button data-testid="cell-items" type="button" onClick={handleCellClick} className={`cellElement ${isCellElementZero ? ' cellZero' : ''}`}>{cellType}</button>);
 
 CellElement.propTypes = {
   handleCellClick: PropTypes.func.isRequired,
