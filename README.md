@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+
 
 # Project Name : Math Magicians
 
@@ -18,8 +18,11 @@ You can find live project at https://gedewon.github.io/math-magicians/
 - GitFlow
 
 ## Live Demo (Link for My Math Magicians Project)
-
-[Live Demo Link](https://gedewon.github.io/math-magician)
+[Github](gedewon.github.io/math-magician/)
+<br />
+[Heroku](https://git.heroku.com/react-mathsapp.git)
+<br/>
+[Netlify](https://git.heroku.com/react-mathsapp.git)
 
 ## Development set up
 
