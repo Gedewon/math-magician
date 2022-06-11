@@ -50,4 +50,16 @@ describe('Testing calculate functioning', () => {
     };
     expect(calculate(obj, btnName)).toStrictEqual(expected);
   });
+  it('Testing "-/+" operation function', () => {
+    const obj = {
+      total: null,
+      next: '20',
+    };
+    const btnName = '+/-';
+    const expected = {
+      total: null,
+      next: '-20',
+    };
+    expect(calculate(obj, btnName)).toStrictEqual(expected);
+  });
 });
